@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/primary_purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Athlete Name"
+        android:textColor="@color/text_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profileImg"
+        app:layout_constraintTop_toTopOf="@id/profileImg" />
+
+    <TextView
+        android:id="@+id/detailsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: STU1001"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/nameTv"
+        app:layout_constraintTop_toBottomOf="@id/nameTv" />
+
+    <Spinner
+        android:id="@+id/testTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/nameTv"
+        app:layout_constraintTop_toBottomOf="@id/detailsTv" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/timeRangeToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/testTypeSpinner"
+        app:singleSelection="true">
+        <Button
+            android:id="@+id/btn1M"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1M" />
+        <Button
+            android:id="@+id/btn3M"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3M" />
+        <Button
+            android:id="@+id/btn6M"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6M" />
+        <Button
+            android:id="@+id/btn1Y"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1Y" />
+        <Button
+            android:id="@+id/btnAll"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ALL" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/chartCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toTopOf="@id/statsGrid"
+        app:layout_constraintTop_toBottomOf="@id/timeRangeToggle">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Performance Over Time"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold" />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/noDataTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No performance data found for this event."
+        android:textColor="@color/text_light"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/chartCard"
+        app:layout_constraintEnd_toEndOf="@id/chartCard"
+        app:layout_constraintStart_toStartOf="@id/chartCard"
+        app:layout_constraintTop_toTopOf="@id/chartCard" />
+
+    <GridLayout
+        android:id="@+id/statsGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        app:layout_constraintBottom_toTopOf="@id/infoBox"
+        app:layout_constraintTop_toBottomOf="@id/chartCard">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Improvement" android:textSize="12sp" />
+            <TextView android:id="@+id/improvementTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="#2E7D32" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Best Time" android:textSize="12sp" />
+            <TextView android:id="@+id/bestTimeTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="@color/text_dark" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Trials" android:textSize="12sp" />
+            <TextView android:id="@+id/totalTrialsTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:textColor="@color/text_dark" android:textStyle="bold" />
+        </LinearLayout>
+    </GridLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/infoBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#F3E8FF"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statsGrid">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Info"
+                android:src="@android:drawable/ic_dialog_info"
+                app:tint="@color/primary_purple" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="The graph shows athlete performance improvement over time."
+                android:textColor="@color/primary_purple"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Kreeda Prerana Scout</string>
+    <string name="welcome_scout">Welcome, Scout</string>
+    <string name="dashboard_subtitle">Kreeda Prerana Dashboard</string>
+    <string name="total_students_tracked">Total Students Tracked</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="settings">Settings</string>
+    <string name="account">Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="switch_account">Switch Account</string>
+    <string name="app_settings">App Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="about_app">About Kreeda Prerana</string>
+    <string name="logout">Logout</string>
+    <string name="login_title">Kreeda Prerana</string>
+    <string name="login_subtitle">Scout Portal Login</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="new_scout_register">New scout? Create an account</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="school_college_name">School/College Name</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="roll_no_usn">Roll No / USN</string>
+    <string name="college">College</string>
+    <string name="class_grade">Class/Grade</string>
+    <string name="semester">Semester</string>
+
+    <string name="daily_attendance">Daily Attendance</string>
+    <string name="submit_attendance">Submit Attendance</string>
+    <string name="attendance_submitted">Attendance submitted successfully</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="select_test_type">Select Test Type:</string>
+    <string name="save_attempt">Save Attempt</string>
+    <string name="performance_saved">Performance saved</string>
+    <string name="invalid_value_timer">Enter a valid value or use timer</string>
+    <string name="no_students_found">No students found. Add your first student from the dashboard!</string>
+    <string name="no_data_found">No records found for this category.</string>
+</resources>

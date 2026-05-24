@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Premium Purple Theme -->
+    <color name="purple_200">#D8B4FE</color>
+    <color name="purple_500">#7C3AED</color>
+    <color name="purple_700">#5B21B6</color>
+
+    <color name="teal_200">#C4B5FD</color>
+    <color name="teal_700">#8B5CF6</color>
+
+    <color name="black">#111827</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="design_default_color_primary">#7C3AED</color>
+    <color name="design_default_color_secondary">#EC4899</color>
+    <color name="design_default_color_error">#DC2626</color>
+
+    <!-- App Custom Colors -->
+    <color name="primary_purple">#6D28D9</color>
+    <color name="dark_purple">#4C1D95</color>
+    <color name="pink_accent">#EC4899</color>
+    <color name="light_bg">#F8F5FF</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_dark">#1F2937</color>
+    <color name="text_light">#9CA3AF</color>
+    <color name="logout_red">#EF4444</color>
+
+</resources>

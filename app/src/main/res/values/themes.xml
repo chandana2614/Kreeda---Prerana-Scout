@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.KreedaPreranaScout" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_purple</item>
+        <item name="colorOnPrimary">@color/text_light</item>
+        <item name="colorSecondary">@color/pink_accent</item>
+        <item name="android:statusBarColor">@color/dark_purple</item>
+    </style>
+
+    <style name="Theme.KreedaPreranaScout" parent="Base.Theme.KreedaPreranaScout" />
+
+    <style name="Theme.KreedaPreranaScout.Launch" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_empty</item>
+        <item name="android:windowSplashScreenBackground">@android:color/white</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+</resources>
