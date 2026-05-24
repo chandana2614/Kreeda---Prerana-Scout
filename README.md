@@ -30,21 +30,48 @@ KreedaPreranaScout is an Android application developed to identify, manage, and 
 KreedaPreranaScout/
 │
 ├── app/
-│   ├── src/main/java/com/example/kreedapreranascout/
-│   │   ├── ui/auth
-│   │   ├── ui/dashboard
-│   │   ├── ui/student
-│   │   ├── ui/performance
-│   │   ├── ui/leaderboard
-│   │   ├── ui/attendance
-│   │   └── ui/settings
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/kreedapreranascout/
+│   │   │   │   ├── data/
+│   │   │   │   │   ├── local/
+│   │   │   │   │   ├── model/
+│   │   │   │   │   └── repository/
+│   │   │   │   │
+│   │   │   │   ├── ui/
+│   │   │   │   │   ├── attendance/
+│   │   │   │   │   ├── auth/
+│   │   │   │   │   ├── dashboard/
+│   │   │   │   │   ├── leaderboard/
+│   │   │   │   │   ├── performance/
+│   │   │   │   │   ├── settings/
+│   │   │   │   │   ├── student/
+│   │   │   │   │   └── talent/
+│   │   │   │   │
+│   │   │   │   ├── util/
+│   │   │   │   └── MainActivity.kt
+│   │   │   │
+│   │   │   ├── res/
+│   │   │   │   ├── layout/
+│   │   │   │   ├── drawable/
+│   │   │   │   ├── navigation/
+│   │   │   │   ├── values/
+│   │   │   │   └── mipmap/
+│   │   │   │
+│   │   │   └── AndroidManifest.xml
+│   │   │
+│   │   ├── test/
+│   │   └── androidTest/
 │   │
-│   ├── src/main/res/layout
-│   ├── src/main/res/drawable
-│   └── src/main/res/navigation
+│   ├── build.gradle.kts
+│   └── proguard-rules.pro
 │
 ├── gradle/
-└── README.md
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradle.properties
+├── README.md
+└── .gitignore
 ```
 
 ## ⚙️ Installation & Setup
@@ -52,7 +79,7 @@ KreedaPreranaScout/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/LavanyaReddy2810/KreedaPreranaScout.git
+git clone https://github.com/chandana2614/Kreeda---Prerana-Scout.git
 ```
 
 ### Open in Android Studio
@@ -92,8 +119,8 @@ The main objective of this project is to digitize sports talent identification a
 
 ## 👩‍💻 Author
 
-**Lavanya Reddy**
+**Chandana D**
 
 ## 🔗 GitHub Repository
 
-https://github.com/LavanyaReddy2810/KreedaPreranaScout
+https://github.com/chandana2614/Kreeda---Prerana-Scout
